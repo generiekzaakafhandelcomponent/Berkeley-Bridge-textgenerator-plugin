@@ -21,22 +21,23 @@
 package com.ritense.valtimoplugins.berkelybridge.plugin
 
 import com.ritense.documentenapi.client.DocumentStatusType
-import com.ritense.plugin.annotation.*
+import com.ritense.plugin.annotation.Plugin
+import com.ritense.plugin.annotation.PluginAction
+import com.ritense.plugin.annotation.PluginActionProperty
+import com.ritense.plugin.annotation.PluginEvent
+import com.ritense.plugin.annotation.PluginProperty
 import com.ritense.plugin.domain.EventType
-import com.ritense.plugin.domain.PluginConfiguration
 import com.ritense.processlink.domain.ActivityTypeWithEventName
 import com.ritense.resource.domain.MetadataType
 import com.ritense.resource.domain.TemporaryResourceUploadedEvent
 import com.ritense.resource.service.TemporaryResourceStorageService
 import com.ritense.valtimoplugins.berkelybridge.client.BerkelyBridgeClient
 import com.ritense.valueresolver.ValueResolverService
+import io.github.oshai.kotlinlogging.KotlinLogging
 import java.net.URL
-import mu.KotlinLogging
 import org.camunda.bpm.engine.delegate.DelegateExecution
 import org.camunda.bpm.engine.variable.Variables
-import org.camunda.bpm.engine.variable.value.SerializationDataFormat
 import org.springframework.context.ApplicationEventPublisher
-import kotlin.math.log
 
 private val logger = KotlinLogging.logger {}
 
